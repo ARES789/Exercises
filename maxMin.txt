@@ -1,0 +1,25 @@
+import math
+import os
+import random
+import re
+import sys
+import heapq
+#
+# Complete the 'miniMaxSum' function below.
+#
+# The function accepts INTEGER_ARRAY arr as parameter.
+#
+
+def miniMaxSum(arr):
+    sumaMax= 0
+    sumaMin=0
+    numerosMax=heapq.nlargest(4,arr)
+    numerosMin=heapq.nsmallest(4,arr)
+    for i in numerosMax:
+        sumaMax += i
+    for n in  numerosMin:
+        sumaMin += n  
+    print(sumaMin, sumaMax)
+  
+  
+  
